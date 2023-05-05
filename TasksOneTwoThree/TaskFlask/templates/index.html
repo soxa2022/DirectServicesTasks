@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="text-center mb-3">Weather App</h1>
+          <form method="POST">
+            <div class="form-group">
+              <label for="city">Enter a city:</label>
+              <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get weather</button>
+          </form>
+
+            <div class="card mt-3">
+              <div class="card-body">
+                <h2 class="card-title">{{ city }}</h2>
+                <p class="card-text">Temperature: {{ temp }} &deg;C</p>
+                <p class="card-text">Humidity: {{ humidity }}%</p>
+                <p class="card-text">Description: {{ description }}</p>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
